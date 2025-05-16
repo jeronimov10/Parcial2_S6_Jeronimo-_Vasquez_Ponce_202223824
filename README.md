@@ -1,0 +1,1 @@
+# Parcial2_S6_Jeronimo-_Vasquez_Ponce_202223824
