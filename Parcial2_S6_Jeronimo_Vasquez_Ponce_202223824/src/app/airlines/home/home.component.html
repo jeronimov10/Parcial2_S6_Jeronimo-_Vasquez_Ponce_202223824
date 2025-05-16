@@ -1,1 +1,18 @@
-<p>home works!</p>
+<div *ngIf="loading">Cargando aerolíneas…</div>
+<div *ngIf="error">{{ error }}</div>
+
+<div class="airlines-grid" *ngIf="!loading && !error && airlines.length === 5">
+  <a
+    *ngFor="let a of airlines; let i = index"
+    class="airline-square"
+    [routerLink]="[a.id]"
+    [ngStyle]="{ 'background-color': a.identityColor }"
+    [attr.data-pos]="i"
+  >
+    {{ a.name }}
+  </a>
+  <div class="airline-square logo-square" style="grid-area: logo">
+    Aerolíneas de Los Andes
+  </div>
+</div>
+
